@@ -24,7 +24,7 @@ labels_array = np.array(labels)
 recognizer.train(faces_array, labels_array)
 
 # Load test image
-test_img_path = "stest.jpg"
+test_img_path = "test.jpg"
 test_img = cv2.imread(test_img_path, cv2.IMREAD_GRAYSCALE)
 
 if test_img is None:
