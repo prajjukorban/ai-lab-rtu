@@ -4,7 +4,7 @@ import wikipedia
 import nltk
 import google.generativeai as genai
 
-genai.configure(api_key='AIzaSyBMl0IeB6js1nuAFE3Dtjzn1eFN__LCfTs')
+genai.configure(api_key='')
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 # Instantiate the generative model
