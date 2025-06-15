@@ -43,14 +43,12 @@ input_data = pd.DataFrame([[age, sex_num, cp, trestbps, chol, fbs, restecg, thal
 exang, oldpeak, slope, ca, thal]],
 columns=X.columns)
 
-if st.button("Predict"):
-
-prediction = model.predict(input_data)[0]
-
-probability = model.predict_proba(input_data)[0][1]
+if st.button("Predict"):  
+  prediction = model.predict(input_data)[0]
+  probability = model.predict_proba(input_data)[0][1]
 
 if prediction == 1:
-st.error(f"⚠️ High risk of heart disease (Confidence: {probability:.2%})")
+  st.error(f"⚠️ High risk of heart disease (Confidence: {probability:.2%})")
 
 else:
-st.success(f"✅ Low risk of heart disease (Confidence: {probability:.2%})")
+  st.success(f"✅ Low risk of heart disease (Confidence: {probability:.2%})")
